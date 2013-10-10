@@ -1,18 +1,29 @@
-html,body,div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,pre,form,p,blockquote,input,abbr,article,aside,figcaption,figure,footer,header,mark,meter,menu,nav,output,progress,section,summary,time{margin:0;padding:0;vertical-align:baseline}
-ul,ol{list-style:none}
-iframe,a,img,button{border:0}
-table{border-collapse:collapse;border-spacing:0}
-article,aside,footer,header,hgroup,nav,section,figure,figcaption{display:block}
-a{text-decoration:none}
-a:hover{text-decoration:underline}
-.clear{clear:both}
-.fleft{float:left}
-.fright{float:right}
-.clearfix:before,.clearfix:after{content:"";display:table}
-.clearfix:after{clear:both;overflow:hidden}
-.clearfix{zoom:1}
-.hidden{display:none}
-.fix-width{width:960px;margin:0 auto}
-img{vertical-align:middle}
-.inline-block{display:inline-block}
-body{font:normal 12px/1.5 Arial,Microsoft Yahei,simsun}
+html,body,div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,pre,form,p,blockquote,input,abbr,article,aside,figcaption,figure,footer,header,mark,meter,menu,nav,output,progress,section,summary,time{margin:0;padding:0;vertical-align:baseline;}
+ul,ol{list-style:none;}
+iframe,a,img,button{border:0;}
+table{border-collapse:collapse;border-spacing:0;}
+article,aside,footer,header,hgroup,nav,section,figure,figcaption{display:block;}
+a{text-decoration:none;}
+a:hover{text-decoration:underline;}
+.clear{clear:both;}
+.fleft{float:left;}
+.fright{float:right;}
+.clearfix:before,.clearfix:after{content:"";display:table;}
+.clearfix:after{clear:both;overflow:hidden;}
+.clearfix{zoom:1;}
+.hidden{display:none;}
+.fix-width{width:960px;margin:0 auto;}
+img{vertical-align:middle;}
+.inline-block{display:inline-block;}
+html{height:100%;}
+body{font:normal 12px/1.5 Arial,Microsoft Yahei,simsun;color:#ffffff;}body.horizontal{height:100%;}
+body.black{background-color:#000;}
+a{color:#ffffff;}
+section.sidebar{background-color:#313131;width:136px;position:fixed;z-index:2;left:15px;top:15px;border-radius:2px;padding-bottom:10px;}section.sidebar a{display:block;padding:10px 0 10px 20px;}section.sidebar a:hover{text-decoration:none;}
+section.sidebar h1{font-size:1.4em;}section.sidebar h1 a{color:skyblue;letter-spacing:1px;}
+section.sidebar p a{padding:5px 0 5px 30px;color:#757575;border-top:1px solid #3c3c3c;border-bottom:1px solid #282828;-webkit-transition:all 0.3s ease;-moz-transition:all 0.3s ease;-ms-transition:all 0.3s ease;-o-transition:all 0.3s ease;transition:all 0.3s ease;}section.sidebar p a:hover{color:#fff;background-color:#292929;}
+section.container{position:absolute;left:0;bottom:30px;height:100%;}
+footer{height:30px;line-height:30px;background-color:#272727;text-align:center;color:#757575;position:fixed;bottom:0;width:100%;}
+div.wrapper{padding-bottom:30px;}
+div.content{height:100%;overflow-x:scroll;overflow-y:hidden;}
+div.plaza{width:500px;float:left;height:100%;background-color:skyblue;}

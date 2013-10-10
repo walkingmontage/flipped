@@ -1,5 +1,106 @@
 @import "reset";
+@import "lib";
+@import "effect";
 
+html{
+    height: 100%;
+}
 body{
 	font: normal 12px/1.5 Arial,Microsoft Yahei,simsun;
+
+    &.horizontal{
+        height: 100%;
+    }
+    &.black{
+        background-color: #000;
+    }
+
+    color: @def;
 }
+
+a{
+    color: @def;
+}
+
+
+section{
+    &.sidebar{
+        background-color: #313131;
+        width: 136px;
+        position: fixed;
+        z-index: 2;
+        left: 15px;
+        top: 15px;
+        border-radius: 2px;
+        padding-bottom: 10px;
+
+        a{
+            display: block;
+            padding: 10px 0 10px 20px;
+            &:hover{
+                text-decoration: none;
+            }
+        }
+
+        h1{
+            font-size: 1.4em;
+            a{
+                color: skyblue;
+                letter-spacing: 1px;
+            }
+        }
+
+        p{
+            a{
+                padding: 5px 0 5px 30px;
+                color: @def-hover;
+                border-top: 1px solid #3c3c3c;
+                border-bottom: 1px solid #282828;
+                .transition(all .3s ease);
+
+                &:hover{
+                    color: #fff;
+                    background-color: #292929;
+                }
+            }
+        }
+    }
+
+
+    &.container{
+        position: absolute;
+        left: 0;
+        bottom: 30px;
+        height: 100%;
+    }
+}
+
+footer{
+    height: 30px;
+    line-height: 30px;
+    background-color: #272727;
+    text-align: center;
+    color: @def-hover;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+div{
+    &.wrapper{
+        padding-bottom: 30px;
+    }
+    &.content{
+        height: 100%;
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+
+    &.plaza{
+        width: 500px;
+        float: left;
+        height: 100%;
+        background-color: skyblue;
+    }
+}
+
