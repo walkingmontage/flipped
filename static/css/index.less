@@ -1,3 +1,6 @@
+@font-face{
+    font-family:'BentonSans';src:url('https://x.myspacecdn.com/new/common/webfonts/Regular/49025c72-39e1-415f-8ced-4d1f41787ca6-2.eot?#iefix') format('embedded-opentype'),url('https://x.myspacecdn.com/new/common/webfonts/Regular/49025c72-39e1-415f-8ced-4d1f41787ca6-3.woff') format('woff'),url('https://x.myspacecdn.com/new/common/webfonts/Regular/49025c72-39e1-415f-8ced-4d1f41787ca6-1.ttf') format('truetype'),url('https://x.myspacecdn.com/new/common/webfonts/Regular/49025c72-39e1-415f-8ced-4d1f41787ca6-4.svg#web') format('svg');font-weight:400;font-style:normal}@font-face{font-family:'BentonSans';src:url('https://x.myspacecdn.com/new/common/webfonts/Bold/b8ab2137-7902-43d7-8a1b-ffb76b3d8d77-2.eot?#iefix') format('embedded-opentype'),url('https://x.myspacecdn.com/new/common/webfonts/Bold/b8ab2137-7902-43d7-8a1b-ffb76b3d8d77-3.woff') format('woff'),url('https://x.myspacecdn.com/new/common/webfonts/Bold/b8ab2137-7902-43d7-8a1b-ffb76b3d8d77-1.ttf') format('truetype'),url('https://x.myspacecdn.com/new/common/webfonts/Bold/b8ab2137-7902-43d7-8a1b-ffb76b3d8d77-4.svg#web') format('svg');font-weight:700;font-style:normal}@font-face{font-family:'BentonSans';src:url('https://x.myspacecdn.com/new/common/webfonts/Medium/df10da2c-4862-4924-bd09-1f85ed8c1dd8-2.eot?#iefix') format('embedded-opentype'),url('https://x.myspacecdn.com/new/common/webfonts/Medium/df10da2c-4862-4924-bd09-1f85ed8c1dd8-3.woff') format('woff'),url('https://x.myspacecdn.com/new/common/webfonts/Medium/df10da2c-4862-4924-bd09-1f85ed8c1dd8-1.ttf') format('truetype'),url('https://x.myspacecdn.com/new/common/webfonts/Medium/df10da2c-4862-4924-bd09-1f85ed8c1dd8-4.svg#web') format('svg');font-weight:500;font-style:normal}@font-face{font-family:'BentonSans';src:url('https://x.myspacecdn.com/new/common/webfonts/Light/b4f87ce4-3979-480f-987e-ef155763f8fe-2.eot?#iefix') format('embedded-opentype'),url('https://x.myspacecdn.com/new/common/webfonts/Light/b4f87ce4-3979-480f-987e-ef155763f8fe-3.woff') format('woff'),url('https://x.myspacecdn.com/new/common/webfonts/Light/b4f87ce4-3979-480f-987e-ef155763f8fe-1.ttf') format('truetype'),url('https://x.myspacecdn.com/new/common/webfonts/Light/b4f87ce4-3979-480f-987e-ef155763f8fe-4.svg#web') format('svg');font-weight:200;font-style:normal}@font-face{font-family:'BentonSans';src:url('https://x.myspacecdn.com/new/common/webfonts/Thin/98fedf04-c934-4a07-8429-4c8a1309d545-2.eot?#iefix') format('embedded-opentype'),url('https://x.myspacecdn.com/new/common/webfonts/Thin/98fedf04-c934-4a07-8429-4c8a1309d545-3.woff') format('woff'),url('https://x.myspacecdn.com/new/common/webfonts/Thin/98fedf04-c934-4a07-8429-4c8a1309d545-1.ttf') format('truetype'),url('https://x.myspacecdn.com/new/common/webfonts/Thin/98fedf04-c934-4a07-8429-4c8a1309d545-4.svg#web') format('svg');font-weight:100;font-style:normal}
+
 @import "reset";
 @import "lib";
 @import "effect";
@@ -6,7 +9,7 @@ html{
     height: 100%;
 }
 body{
-	font: normal 12px/1.5 Arial,Microsoft Yahei,simsun;
+	font: 100 12px/1.5 @english-font;
 
     &.horizontal{
         height: 100%;
@@ -44,6 +47,7 @@ section{
 
         h1{
             font-size: 1.4em;
+            font-weight: 400;
             a{
                 color: skyblue;
                 letter-spacing: 1px;
@@ -61,6 +65,7 @@ section{
                 &:hover{
                     color: #fff;
                     background-color: #292929;
+                    border-right: 3px solid skyblue;
                 }
             }
         }
@@ -70,7 +75,7 @@ section{
     &.container{
         position: absolute;
         left: 0;
-        bottom: 30px;
+        bottom: 31px;
         height: 100%;
     }
 }
@@ -100,7 +105,56 @@ div{
         width: 500px;
         float: left;
         height: 100%;
-        background-color: skyblue;
+        background: #000 url(../images/flipped.jpg) no-repeat;
+        margin-left: 1px;
+        margin-right: 1px;
+    }
+
+    &.plaza-info{
+        background-color: rgba(0, 0, 0, 0.2);
+        height: 100%;
+        color: #fff;
+        line-height: 1.4em;
+        font-size: 1.2em;
+        padding: 540px 20px 0;
+    }
+
+    &.metro{
+        height: 100%;
+        margin-left: 502px;
+
+
+        ul{
+            position: relative;
+            height: 100%;
+            width: 1000px;
+        }
+
+        li{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
