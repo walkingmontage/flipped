@@ -1,5 +1,5 @@
 @font-face{
-    font-family:'BentonSans';src:url('https://x.myspacecdn.com/new/common/webfonts/Regular/49025c72-39e1-415f-8ced-4d1f41787ca6-2.eot?#iefix') format('embedded-opentype'),url('https://x.myspacecdn.com/new/common/webfonts/Regular/49025c72-39e1-415f-8ced-4d1f41787ca6-3.woff') format('woff'),url('https://x.myspacecdn.com/new/common/webfonts/Regular/49025c72-39e1-415f-8ced-4d1f41787ca6-1.ttf') format('truetype'),url('https://x.myspacecdn.com/new/common/webfonts/Regular/49025c72-39e1-415f-8ced-4d1f41787ca6-4.svg#web') format('svg');font-weight:400;font-style:normal}@font-face{font-family:'BentonSans';src:url('https://x.myspacecdn.com/new/common/webfonts/Bold/b8ab2137-7902-43d7-8a1b-ffb76b3d8d77-2.eot?#iefix') format('embedded-opentype'),url('https://x.myspacecdn.com/new/common/webfonts/Bold/b8ab2137-7902-43d7-8a1b-ffb76b3d8d77-3.woff') format('woff'),url('https://x.myspacecdn.com/new/common/webfonts/Bold/b8ab2137-7902-43d7-8a1b-ffb76b3d8d77-1.ttf') format('truetype'),url('https://x.myspacecdn.com/new/common/webfonts/Bold/b8ab2137-7902-43d7-8a1b-ffb76b3d8d77-4.svg#web') format('svg');font-weight:700;font-style:normal}@font-face{font-family:'BentonSans';src:url('https://x.myspacecdn.com/new/common/webfonts/Medium/df10da2c-4862-4924-bd09-1f85ed8c1dd8-2.eot?#iefix') format('embedded-opentype'),url('https://x.myspacecdn.com/new/common/webfonts/Medium/df10da2c-4862-4924-bd09-1f85ed8c1dd8-3.woff') format('woff'),url('https://x.myspacecdn.com/new/common/webfonts/Medium/df10da2c-4862-4924-bd09-1f85ed8c1dd8-1.ttf') format('truetype'),url('https://x.myspacecdn.com/new/common/webfonts/Medium/df10da2c-4862-4924-bd09-1f85ed8c1dd8-4.svg#web') format('svg');font-weight:500;font-style:normal}@font-face{font-family:'BentonSans';src:url('https://x.myspacecdn.com/new/common/webfonts/Light/b4f87ce4-3979-480f-987e-ef155763f8fe-2.eot?#iefix') format('embedded-opentype'),url('https://x.myspacecdn.com/new/common/webfonts/Light/b4f87ce4-3979-480f-987e-ef155763f8fe-3.woff') format('woff'),url('https://x.myspacecdn.com/new/common/webfonts/Light/b4f87ce4-3979-480f-987e-ef155763f8fe-1.ttf') format('truetype'),url('https://x.myspacecdn.com/new/common/webfonts/Light/b4f87ce4-3979-480f-987e-ef155763f8fe-4.svg#web') format('svg');font-weight:200;font-style:normal}@font-face{font-family:'BentonSans';src:url('https://x.myspacecdn.com/new/common/webfonts/Thin/98fedf04-c934-4a07-8429-4c8a1309d545-2.eot?#iefix') format('embedded-opentype'),url('https://x.myspacecdn.com/new/common/webfonts/Thin/98fedf04-c934-4a07-8429-4c8a1309d545-3.woff') format('woff'),url('https://x.myspacecdn.com/new/common/webfonts/Thin/98fedf04-c934-4a07-8429-4c8a1309d545-1.ttf') format('truetype'),url('https://x.myspacecdn.com/new/common/webfonts/Thin/98fedf04-c934-4a07-8429-4c8a1309d545-4.svg#web') format('svg');font-weight:100;font-style:normal}
+    font-family:'BentonSans';src:url('../webfonts/Regular/49025c72-39e1-415f-8ced-4d1f41787ca6-2.eot?#iefix') format('embedded-opentype'),url('../webfonts/Regular/49025c72-39e1-415f-8ced-4d1f41787ca6-3.woff') format('woff'); font-weight:100;font-style:normal}
 
 @import "reset";
 @import "lib";
@@ -28,20 +28,31 @@ a{
 
 section{
     &.sidebar{
-        background-color: #313131;
+        
         width: 136px;
         position: fixed;
         z-index: 2;
         left: 15px;
         top: 15px;
-        border-radius: 2px;
-        padding-bottom: 10px;
+
+        div{
+            background-color: #313131;
+            border-radius: 2px;
+            padding-bottom: 10px;
+        }
 
         a{
             display: block;
-            padding: 10px 0 10px 20px;
+           
             &:hover{
                 text-decoration: none;
+            }
+
+            &.sign-in{
+            }
+
+            &.sign-up{
+                margin-top: 6px;
             }
         }
 
@@ -49,13 +60,16 @@ section{
             font-size: 1.4em;
             font-weight: 400;
             a{
-                color: skyblue;
+                color: @skyblue;
+                padding: 10px 0 10px 20px;
                 letter-spacing: 1px;
+                text-shadow: 0 0 1px #000;
             }
         }
 
         p{
             a{
+                padding: 10px 0 10px 20px;
                 padding: 5px 0 5px 30px;
                 color: @def-hover;
                 border-top: 1px solid #3c3c3c;
@@ -69,14 +83,24 @@ section{
                 }
             }
         }
+
+        span{
+            background-color: rgba(0, 0, 0, 0.1);
+            padding: 6px;
+            display: block;
+            margin-top: 10px;
+            border-radius: 2px;
+        }
     }
 
 
     &.container{
         position: absolute;
         left: 0;
+        top:0;
         bottom: 31px;
         height: 100%;
+        background-color: #F0F0F0;
     }
 }
 
@@ -106,34 +130,41 @@ div{
         float: left;
         height: 100%;
         background: #000 url(../images/flipped.jpg) no-repeat;
-        margin-left: 1px;
-        margin-right: 1px;
     }
 
     &.plaza-info{
         background-color: rgba(0, 0, 0, 0.2);
-        height: 100%;
         color: #fff;
         line-height: 1.4em;
         font-size: 1.2em;
+        font-weight: 100;
         padding: 540px 20px 0;
+        opacity: 0.4;
     }
 
     &.metro{
         height: 100%;
-        margin-left: 502px;
-
+        margin-left: 501px;
+        position: relative;
+        width: 3000px;
 
         ul{
-            position: relative;
+            
             height: 100%;
-            width: 1000px;
+           
         }
 
         li{
             position: absolute;
             top: 0;
             left: 0;
+            opacity: 0;
+            .transition(opacity .4s linear);
+
+            img{
+                width: 100%;
+                height: 100%;
+            }
         }
     }
 }
