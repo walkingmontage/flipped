@@ -7,9 +7,12 @@
 
 html{
     height: 100%;
+    width: 100%;
 }
 body{
 	font: 100 12px/1.5 @english-font;
+    overflow-x: hidden;
+    width: 100%;
 
     &.horizontal{
         height: 100%;
@@ -99,8 +102,9 @@ section{
         left: 0;
         top:0;
         bottom: 31px;
-        height: 100%;
+        //height: 100%;
         background-color: #F0F0F0;
+        width: 100%;
     }
 }
 
@@ -118,35 +122,45 @@ footer{
 div{
     &.wrapper{
         padding-bottom: 30px;
+        width: 100%;
     }
     &.content{
         height: 100%;
         overflow-x: scroll;
         overflow-y: hidden;
+        width: 100%;
     }
 
     &.plaza{
         width: 500px;
         float: left;
         height: 100%;
+        position: relative;
         background: #000 url(../images/flipped.jpg) no-repeat;
+        
+        .plaza-info{
+            color: #666;
+            line-height: 1.2em;
+            font-size: 1.2em;
+            font-weight: 100;
+            padding: 540px 20px 0;
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+        }
+        .plaza-bg{
+            background-color: rgba(0, 0, 0, 0.2);
+            width: 100%;
+            height: 100%;
+        }
     }
 
-    &.plaza-info{
-        background-color: rgba(0, 0, 0, 0.2);
-        color: #fff;
-        line-height: 1.4em;
-        font-size: 1.2em;
-        font-weight: 100;
-        padding: 540px 20px 0;
-        opacity: 0.4;
-    }
 
     &.metro{
-        height: 100%;
+        //height: 100%;
         margin-left: 501px;
         position: relative;
-        width: 3000px;
+        //width: 3000px;
 
         ul{
             
@@ -164,6 +178,70 @@ div{
             img{
                 width: 100%;
                 height: 100%;
+            }
+
+            a{
+                width: 100%;
+                height: 100%;
+                display: block;
+
+                figure{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0);
+                    color: #fff;
+                    font-size: 1.6em;
+                    left: 0;
+                    top: 0;
+                    .transition(background-color .2s linear);
+                }
+                div{
+                    &.metro-item{
+                        position: relative;
+                        height: 100%;
+                        overflow: hidden;
+                    }
+
+                    &.item-info{
+                        position: absolute;
+                        bottom: -61px;
+                        left: 0;
+                        width: 100%;                        
+                        color: #999;
+                        .transition(bottom .3s linear);
+                    }
+                    
+                }
+                strong{
+                    display: block;
+                    margin: 0 10px;
+                    padding-bottom: 10px;
+                    line-height: 1em;
+                    font-weight: 100;
+                    font-size: 2em;
+                }
+                p{
+                    border-top: 1px dotted #666;
+                    font-size: 12px;
+                    line-height: 1.2em;
+                    font-weight: 100;
+                    padding: 10px;
+                    margin: 0 10px;
+                    height: 40px;
+                    overflow: hidden;
+                }
+
+                &:hover{
+                    figure{
+                        background-color: rgba(0, 0, 0, 0.4);
+                    }
+
+                    div.item-info{
+                        color: #eee;
+                        bottom: 0em;
+                    }
+                }
             }
         }
     }

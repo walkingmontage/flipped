@@ -37,7 +37,7 @@ var metro = {
 
 }
 $(function(){
-    $('.content').css({width: $(window).width() +'px'});
+    //$('.content').css({width: $(window).width() +'px'});
 
     //可用高度
     metro.render();
