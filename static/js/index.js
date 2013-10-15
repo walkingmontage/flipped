@@ -1,25 +1,44 @@
 var metro = {
-    place: [],
-    count: 0,
     render: function(delay){
-        var pos = metro.getPos($(window).height() - 30, 300),
+        var pos = this.getPos($(window).height() - 30, 300),
             size = pos.size,
+
+            //显示的行数
             row = pos.row;
+        var metro = $('.metro li'),
+            len = metro.length,
+            repetitive = [],
+            list = [],
+            count = 0;
 
-        $('.metro li').each(function(i, v){
-            var x = Math.floor(metro.count /row),
-                y = metro.count % row;
+        for(var i=0; i<len; i++){
+            var x = Math.floor(i /row),
+                y = i % row;
+                
+            list.push([x, y]);
 
-            if(delay){
-                metro.show(v, size, x, y);
-            }else{
-                setTimeout(function(){
-                     metro.show(v, size, x, y);
-                }, 100 * i);    
+            if(metro.eq(i).data('type') == 'big'){
+                console.log(i + parseInt(row))
+                list.splice(i + parseInt(row), 1);
+                len ++ ;
             }
+        }
 
-            metro.count ++;
-        });
+        //console.log(list.join('\n'))
+        //console.log(repetitive.join('\n'))
+
+        // $('.metro li').each(function(i, v){
+        //     var x = Math.floor(i /row),
+        //         y = i % row;
+
+        //     if(delay){
+        //         metro.show(v, size, x, y);
+        //     }else{
+        //         setTimeout(function(){
+        //              metro.show(v, size, x, y);
+        //         }, 100 * i);    
+        //     }
+        // });
     },
 
     getPos: function(total, height){
@@ -52,7 +71,6 @@ var metro = {
 
             // 宽度增加
             width = size * 2 + 1;
-            metro.count ++;
         }
 
         obj.css({
