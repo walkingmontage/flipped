@@ -5,40 +5,19 @@ var metro = {
 
             //显示的行数
             row = pos.row;
-        var metro = $('.metro li'),
-            len = metro.length,
-            repetitive = [],
-            list = [],
-            count = 0;
 
-        for(var i=0; i<len; i++){
+        $('.metro li').each(function(i, v){
             var x = Math.floor(i /row),
                 y = i % row;
-                
-            list.push([x, y]);
 
-            if(metro.eq(i).data('type') == 'big'){
-                console.log(i + parseInt(row))
-                list.splice(i + parseInt(row), 1);
-                len ++ ;
+            if(delay){
+                metro.show(v, size, x, y);
+            }else{
+                setTimeout(function(){
+                     metro.show(v, size, x, y);
+                }, 100 * i);    
             }
-        }
-
-        //console.log(list.join('\n'))
-        //console.log(repetitive.join('\n'))
-
-        // $('.metro li').each(function(i, v){
-        //     var x = Math.floor(i /row),
-        //         y = i % row;
-
-        //     if(delay){
-        //         metro.show(v, size, x, y);
-        //     }else{
-        //         setTimeout(function(){
-        //              metro.show(v, size, x, y);
-        //         }, 100 * i);    
-        //     }
-        // });
+        });
     },
 
     getPos: function(total, height){
@@ -56,22 +35,7 @@ var metro = {
         console.log(x, y)
         obj = $(obj);
 
-        $.each(metro.place, function(i, v){
-            if(v[0] == x && v[1] == y){
-                y = y + 1;
-                return false;
-            }
-        });
-
-        //如果是占两列的大块 记录下多占的坐标 循环的时候跳过此处
-        var type = obj.data('type'),
-            width = size;
-        if(type == 'big'){
-            metro.place.push([x+1, y]);
-
-            // 宽度增加
-            width = size * 2 + 1;
-        }
+        var width = size * 2 + 1;
 
         obj.css({
             width: width +'px', 

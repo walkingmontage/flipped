@@ -172,8 +172,15 @@ div{
             position: absolute;
             top: 0;
             left: 0;
-            opacity: 0;
+            opacity: 1;
             .transition(opacity .4s linear);
+            
+            &.bro{
+                a{
+                    width: 100%;
+                    margin-right: 0;
+                }
+            }
 
             img{
                 width: 100%;
@@ -181,9 +188,11 @@ div{
             }
 
             a{
-                width: 100%;
+                width: 50%;
                 height: 100%;
                 display: block;
+                float: left;
+                position: relative;
 
                 figure{
                     position: absolute;
